@@ -17,8 +17,9 @@
       <button v-on:click="addItem">追加</button>
     </form>
     <ul>
-      <li v-for="todo in todos">
-        {{ todo.item }}
+      <li v-for="(todo, index) in todos">
+        <span>{{ todo.item }}</span>
+        <button v-on:click="deleteItem(index)">削除</button>
       </li>
     </ul>
   </div>

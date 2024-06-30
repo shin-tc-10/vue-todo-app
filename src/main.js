@@ -13,6 +13,10 @@ const app = Vue.createApp({
                 item: this.inputText
             }
             this.todos.push(todo);
+            this.inputText = '';
+        },
+        deleteItem: function (index) {
+            this.todos.splice(index, 1);
         }
     }
 
