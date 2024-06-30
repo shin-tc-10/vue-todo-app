@@ -1,10 +1,21 @@
 // 関数を定義する
+const app = Vue.createApp({
 
+    // dataを定義する
+    data: () => ({
+        inputText: '',
+        todos: []
+    }),
+    // methodを定義する
+    methods: {
+        addItem: function (event) {
+            let todo = {
+                item: this.inputText
+            }
+            this.todos.push(todo);
+        }
+    }
 
-// dataを定義する
-
-
-// methodを定義する
-
-
+})
 // 関数をマウントする
+app.mount('#app');
