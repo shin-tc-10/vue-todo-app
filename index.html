@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="src/assets/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vite App</title>
   <script src="https://unpkg.com/vue@next"></script>
@@ -18,7 +19,8 @@
     </form>
     <ul>
       <li v-for="(todo, index) in todos">
-        <span>{{ todo.item }}</span>
+        <input type="checkBox" v-model="todo.isDone">
+        <span v-bind:class="{ done: todo.isDone }">{{ todo.item }}</span>
         <button v-on:click="deleteItem(index)">削除</button>
       </li>
     </ul>

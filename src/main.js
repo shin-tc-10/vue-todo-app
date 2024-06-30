@@ -10,7 +10,8 @@ const app = Vue.createApp({
     methods: {
         addItem: function (event) {
             let todo = {
-                item: this.inputText
+                item: this.inputText,
+                isDone: false
             }
             this.todos.push(todo);
             this.inputText = '';
