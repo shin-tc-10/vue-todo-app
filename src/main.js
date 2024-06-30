@@ -9,6 +9,7 @@ const app = Vue.createApp({
     // methodを定義する
     methods: {
         addItem: function (event) {
+            if (!this.inputText) return;
             let todo = {
                 item: this.inputText,
                 isDone: false
